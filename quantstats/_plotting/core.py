@@ -20,7 +20,7 @@
 
 import matplotlib.pyplot as _plt
 try:
-    _plt.rcParams["font.family"] = "Arial"
+    _plt.rcParams["font.family"] = "DejaVu Sans"
 except Exception:
     pass
 
@@ -71,7 +71,7 @@ def plot_returns_bars(returns, benchmark=None,
                       hline=None, hlw=None, hlcolor="red", hllabel="",
                       resample="A", title="Returns", match_volatility=False,
                       log_scale=False, figsize=(10, 6),
-                      grayscale=False, fontname='Arial', ylabel=True,
+                      grayscale=False, fontname="DejaVu Sans", ylabel=True,
                       subtitle=True, savefig=None, show=True):
 
     if match_volatility and benchmark is None:
@@ -188,7 +188,7 @@ def plot_timeseries(returns, benchmark=None,
                     hline=None, hlw=None, hlcolor="red", hllabel="",
                     percent=True, match_volatility=False, log_scale=False,
                     resample=None, lw=1.5, figsize=(10, 6), ylabel="",
-                    grayscale=False, fontname="Arial",
+                    grayscale=False, fontname="Deja",
                     subtitle=True, savefig=None, show=True):
 
     colors, ls, alpha = _get_colors(grayscale)
@@ -312,7 +312,7 @@ def plot_timeseries(returns, benchmark=None,
 
 
 def plot_histogram(returns, resample="M", bins=20,
-                   fontname='Arial', grayscale=False,
+                   fontname="DejaVu Sans", grayscale=False,
                    title="Returns", kde=True, figsize=(10, 6),
                    ylabel=True, subtitle=True, compounded=True,
                    savefig=None, show=True):
@@ -401,7 +401,7 @@ def plot_rolling_stats(returns, benchmark=None, title="",
                        returns_label="Strategy",
                        hline=None, hlw=None, hlcolor="red", hllabel="",
                        lw=1.5, figsize=(10, 6), ylabel="",
-                       grayscale=False, fontname="Arial", subtitle=True,
+                       grayscale=False, fontname="Deja", subtitle=True,
                        savefig=None, show=True):
 
     colors, _, _ = _get_colors(grayscale)
@@ -483,7 +483,7 @@ def plot_rolling_beta(returns, benchmark,
                       window1=126, window1_label="",
                       window2=None, window2_label="",
                       title="", hlcolor="red", figsize=(10, 6),
-                      grayscale=False, fontname="Arial", lw=1.5,
+                      grayscale=False, fontname="Deja", lw=1.5,
                       ylabel=True, subtitle=True, savefig=None, show=True):
 
     colors, _, _ = _get_colors(grayscale)
@@ -559,7 +559,7 @@ def plot_rolling_beta(returns, benchmark,
 
 
 def plot_longest_drawdowns(returns, periods=5, lw=1.5,
-                           fontname='Arial', grayscale=False,
+                           fontname="DejaVu Sans", grayscale=False,
                            log_scale=False, figsize=(10, 6), ylabel=True,
                            subtitle=True, compounded=True,
                            savefig=None, show=True):
@@ -645,7 +645,7 @@ def plot_longest_drawdowns(returns, periods=5, lw=1.5,
 
 
 def plot_distribution(returns, figsize=(10, 6),
-                      fontname='Arial', grayscale=False, ylabel=True,
+                      fontname="DejaVu Sans", grayscale=False, ylabel=True,
                       subtitle=True, compounded=True,
                       savefig=None, show=True):
 

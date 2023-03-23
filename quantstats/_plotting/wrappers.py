@@ -59,7 +59,7 @@ def to_plotly(fig):
 
 
 def snapshot(returns, grayscale=False, figsize=(10, 8),
-             title='Portfolio Summary', fontname='Arial', lw=1.5,
+             title='Portfolio Summary', fontname='DejaVu Sans', lw=1.5,
              mode="comp", subtitle=True, savefig=None, show=True,
              log_scale=False):
 
@@ -176,7 +176,7 @@ def snapshot(returns, grayscale=False, figsize=(10, 8),
 def earnings(returns, start_balance=1e5, mode="comp",
              grayscale=False, figsize=(10, 6),
              title='Portfolio Earnings',
-             fontname='Arial', lw=1.5,
+             fontname='DejaVu Sans', lw=1.5,
              subtitle=True, savefig=None, show=True):
 
     colors = _GRAYSCALE_COLORS if grayscale else _FLATUI_COLORS
@@ -255,7 +255,7 @@ def earnings(returns, start_balance=1e5, mode="comp",
 
 def returns(returns, benchmark=None,
             grayscale=False, figsize=(10, 6),
-            fontname='Arial', lw=1.5,
+            fontname='DejaVu Sans', lw=1.5,
             match_volatility=False, compound=True, cumulative=True,
             resample=None, ylabel="Cumulative Returns",
             subtitle=True, savefig=None, show=True,
@@ -294,7 +294,7 @@ def returns(returns, benchmark=None,
 
 def log_returns(returns, benchmark=None,
                 grayscale=False, figsize=(10, 5),
-                fontname='Arial', lw=1.5,
+                fontname='DejaVu Sans', lw=1.5,
                 match_volatility=False, compound=True, cumulative=True,
                 resample=None, ylabel="Cumulative Returns",
                 subtitle=True, savefig=None, show=True,
@@ -336,7 +336,7 @@ def log_returns(returns, benchmark=None,
 
 def daily_returns(returns,
                   grayscale=False, figsize=(10, 4),
-                  fontname='Arial', lw=0.5,
+                  fontname='DejaVu Sans', lw=0.5,
                   log_scale=False, ylabel="Returns",
                   subtitle=True, savefig=None, show=True,
                   prepare_returns=True):
@@ -361,7 +361,7 @@ def daily_returns(returns,
 
 
 def yearly_returns(returns, benchmark=None,
-                   fontname='Arial', grayscale=False,
+                   fontname='DejaVu Sans', grayscale=False,
                    hlw=1.5, hlcolor="red", hllabel="",
                    match_volatility=False,
                    log_scale=False, figsize=(10, 5), ylabel=True,
@@ -404,7 +404,7 @@ def yearly_returns(returns, benchmark=None,
         return fig
 
 
-def distribution(returns, fontname='Arial', grayscale=False, ylabel=True,
+def distribution(returns, fontname='DejaVu Sans', grayscale=False, ylabel=True,
                  figsize=(10, 6), subtitle=True, compounded=True,
                  savefig=None, show=True,
                  prepare_returns=True):
@@ -423,7 +423,7 @@ def distribution(returns, fontname='Arial', grayscale=False, ylabel=True,
         return fig
 
 
-def histogram(returns, resample='M', fontname='Arial',
+def histogram(returns, resample='M', fontname='DejaVu Sans',
               grayscale=False, figsize=(10, 5), ylabel=True,
               subtitle=True, compounded=True, savefig=None, show=True,
               prepare_returns=True):
@@ -455,7 +455,7 @@ def histogram(returns, resample='M', fontname='Arial',
 
 
 def drawdown(returns, grayscale=False, figsize=(10, 5),
-             fontname='Arial', lw=1, log_scale=False,
+             fontname='DejaVu Sans', lw=1, log_scale=False,
              match_volatility=False, compound=False, ylabel="Drawdown",
              resample=None, subtitle=True, savefig=None, show=True):
 
@@ -476,7 +476,7 @@ def drawdown(returns, grayscale=False, figsize=(10, 5),
 
 
 def drawdowns_periods(returns, periods=5, lw=1.5, log_scale=False,
-                      fontname='Arial', grayscale=False, figsize=(10, 5),
+                      fontname='DejaVu Sans', grayscale=False, figsize=(10, 5),
                       ylabel=True, subtitle=True, compounded=True,
                       savefig=None, show=True,
                       prepare_returns=True):
@@ -501,7 +501,7 @@ def drawdowns_periods(returns, periods=5, lw=1.5, log_scale=False,
 def rolling_beta(returns, benchmark,
                  window1=126, window1_label="6-Months",
                  window2=252, window2_label="12-Months",
-                 lw=1.5, fontname='Arial', grayscale=False,
+                 lw=1.5, fontname='DejaVu Sans', grayscale=False,
                  figsize=(10, 3), ylabel=True,
                  subtitle=True, savefig=None, show=True,
                  prepare_returns=True):
@@ -529,7 +529,7 @@ def rolling_beta(returns, benchmark,
 def rolling_volatility(returns, benchmark=None,
                        period=126, period_label="6-Months",
                        periods_per_year=252,
-                       lw=1.5, fontname='Arial', grayscale=False,
+                       lw=1.5, fontname='DejaVu Sans', grayscale=False,
                        figsize=(10, 3), ylabel="Volatility",
                        subtitle=True, savefig=None, show=True):
 
@@ -558,7 +558,7 @@ def rolling_volatility(returns, benchmark=None,
 def rolling_sharpe(returns, benchmark=None, rf=0.,
                    period=126, period_label="6-Months",
                    periods_per_year=252,
-                   lw=1.25, fontname='Arial', grayscale=False,
+                   lw=1.25, fontname='DejaVu Sans', grayscale=False,
                    figsize=(10, 3), ylabel="Sharpe",
                    subtitle=True, savefig=None, show=True):
 
@@ -589,7 +589,7 @@ def rolling_sharpe(returns, benchmark=None, rf=0.,
 def rolling_sortino(returns, benchmark=None, rf=0.,
                     period=126, period_label="6-Months",
                     periods_per_year=252,
-                    lw=1.25, fontname='Arial', grayscale=False,
+                    lw=1.25, fontname='DejaVu Sans', grayscale=False,
                     figsize=(10, 3), ylabel="Sortino",
                     subtitle=True, savefig=None, show=True):
 
@@ -620,7 +620,7 @@ def rolling_sortino(returns, benchmark=None, rf=0.,
 def monthly_heatmap(returns, annot_size=10, figsize=(10, 5),
                     cbar=True, square=False,
                     compounded=True, eoy=False,
-                    grayscale=False, fontname='Arial',
+                    grayscale=False, fontname='DejaVu Sans',
                     ylabel=True, savefig=None, show=True):
 
     # colors, ls, alpha = _core._get_colors(grayscale)
@@ -699,7 +699,7 @@ def monthly_heatmap(returns, annot_size=10, figsize=(10, 5),
 def monthly_returns(returns, annot_size=10, figsize=(10, 5),
                     cbar=True, square=False,
                     compounded=True, eoy=False,
-                    grayscale=False, fontname='Arial',
+                    grayscale=False, fontname='DejaVu Sans',
                     ylabel=True, savefig=None, show=True):
     return monthly_heatmap(returns, annot_size, figsize,
                            cbar, square,
